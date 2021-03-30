@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const agentSchema = new Schema(
   {
     agentData: { type: Object },
-    slots: { type: Number },
+    slot: { type: Number, default: 0 },
   },
   { timestamps: true, versionKey: false }
 );
