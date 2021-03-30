@@ -5,8 +5,10 @@ exports.Allocate = async (req, res, next) => {
   try {
     const agents = await Agent.find().sort({ createdAt: 1 });
 
+    console.log(req);
+
     for (let i = 0; i < agents.length; i++) {
-      console.log(i);
+      // console.log(i);
       if (agents[i].slot < 2) {
         // allocate the user
         // console.log("Allocate the User");
