@@ -29,8 +29,10 @@ db.once("open", () => console.log("Connected to MongoDB"));
 // routes
 const errorHandler = require("./middlewares/errorHandler");
 const agentRoutes = require("./routes/agent");
+const allocateRoutes = require("./routes/allocate");
 app.use(errorHandler);
 app.use("/agent", agentRoutes);
+app.use("/allocate", allocateRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`));
