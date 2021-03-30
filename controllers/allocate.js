@@ -5,7 +5,7 @@ exports.Allocate = async (req, res, next) => {
   try {
     const agents = await Agent.find().sort({ createdAt: 1 });
 
-    console.log(req);
+    console.log(req.body);
 
     for (let i = 0; i < agents.length; i++) {
       // console.log(i);
