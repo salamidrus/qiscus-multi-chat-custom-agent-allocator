@@ -5,8 +5,6 @@ exports.Allocate = async (req, res, next) => {
   try {
     const agents = await Agent.find().sort({ createdAt: 1 });
 
-    console.log(req.body);
-
     for (let i = 0; i < agents.length; i++) {
       // console.log(i);
       if (agents[i].slot < 2) {
@@ -18,10 +16,11 @@ exports.Allocate = async (req, res, next) => {
       if (i == agents.length - 1) {
         // put user into queue list
         // console.log("Put User into queue list");
+        await QueueList.create({ userData: req.body });
       }
     }
 
-    res.send(agents);
+    res.send("Webhook Triggered");
   } catch (err) {
     next(err);
   }
