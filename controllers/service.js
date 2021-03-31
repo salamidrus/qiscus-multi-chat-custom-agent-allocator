@@ -139,6 +139,7 @@ exports.AllocateAgent = async (req, res, next) => {
 
 exports.AllocateCustomer = async (req, res, next) => {
   try {
+    // sort by FIFO
     let data = await Customer.findOne({ isQueue: true }).sort({ createdAt: 1 });
 
     if (!data)
@@ -161,12 +162,12 @@ exports.AllocateCustomer = async (req, res, next) => {
 exports.MarkAsResolvedChat = async (req, res, next) => {
   try {
     const { room_id, notes, is_send_email, extras, agent_id } = req.body;
-    // assign the agent
+
     let { data } = await axios({
       url: `${BASE_URI}/api/v1/agent/service/mark_as_resolved`,
       method: "POST",
       headers: {
-        Authorization: req.headers.Authorization,
+        Authorization: req.headers.authorization,
         "Qiscus-App-Id": APP_CODE,
       },
       data: {
@@ -200,7 +201,7 @@ exports.RemoveAgent = async (req, res, next) => {
   try {
     const { room_id, agent_id } = req.body;
 
-    // assign the agent
+    // remove the agent
     let { data } = await axios({
       url: `${BASE_URI}/api/v1/admin/service/remove_agent`,
       method: "POST",
@@ -222,7 +223,7 @@ exports.RemoveAgent = async (req, res, next) => {
       }
     );
 
-    // removing the agent id and data on customer data
+    // removing the agent id, data on customer data, set isQueue to true, update created_at
     await Customer.findOneAndUpdate(
       { "userData.room_id": room_id },
       {
