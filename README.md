@@ -23,9 +23,8 @@ This project is intended to complete the assignment for qiscus as multi channel 
       -  [Sequence Diagram](#sequence-diagram)
       -  [ERD](#erd)
     - 🖥️ [Code Implementation](#chatbot)
-      - Constraint
-      - Postman API Documentation
-      - Demo
+      - [Postman API Documentation](#documentation)
+      - [Demo](#demo)
 - 🔗 [Links](#links)
 
 - ⚖️ [License](#license)
@@ -77,14 +76,39 @@ The ERD for the designed app
 </a>
 
 
-The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> Sequence Diagram </a>
+The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank">ERD </a>
+
+
+### 🖥️ Code Implementation
+The documentation and demo how the app works
+
+#### Documentation
+<a href="https://documenter.getpostman.com/view/12075190/TzCMd8Q8" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617183583/qiscus/Capture1_sb79gx.png" alt="erd">
+</a>
+
+The collection of all APIs can be found here: <a href="https://documenter.getpostman.com/view/12075190/TzCMd8Q8" target="_blank"> Qiscus - Agent Allocation API </a>
+
+
+### Demo
+Provided video is to see how it is implemented on qiscus multi channel chat services.
+
+<a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617183493/qiscus/Capture_e5pcqe.png" alt="erd">
+</a>
+
+<a href="https://res.cloudinary.com/di02ey9t7/video/upload/v1617183364/qiscus/qiscus-demo_xj5cqo.mp4" target="_blank"> VIDEO DEMO </a>
+
 
 
 ## 🔗 Links
 
+* <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
 * <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
 * <a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> Sequence Diagram </a>
 * <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> ERD </a>
+* <a href="https://documenter.getpostman.com/view/12075190/TzCMd8Q8" target="_blank"> Qiscus - Agent Allocation API </a>
+* <a href="https://res.cloudinary.com/di02ey9t7/video/upload/v1617183364/qiscus/qiscus-demo_xj5cqo.mp4" target="_blank"> VIDEO DEMO </a>
 
 ## ⚖️ License
 
