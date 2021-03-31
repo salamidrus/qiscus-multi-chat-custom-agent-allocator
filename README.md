@@ -22,7 +22,7 @@ This project is intended to complete the assignment for qiscus as multi channel 
       -  [Flowchart](#flowchart)
       -  [Sequence Diagram](#sequence-diagram)
       -  [ERD](#erd)
-    - 🖥️ [3. Code Implementation](#chatbot)
+    - 🖥️ [Code Implementation](#chatbot)
       - Constraint
       - Postman API Documentation
       - Demo
