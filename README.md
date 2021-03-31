@@ -30,7 +30,7 @@ This project is intended to complete the assignment for qiscus as multi channel 
 - ⚖️ [License](#license)
 
 
-## Tasks
+## 📋 Tasks
 There are three sections for the assignments covering the configuration, design and analysis, and code implementation.
 
 ### Configuration
