@@ -87,3 +87,26 @@ exports.Assign = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.Allocate = async (req, res, next) => {
+  try {
+    // allocate agent sort by the least slot
+    const agent = await Agent.findOne().sort({ slot: 1 }).select("-_id");
+
+    if (agent.slot == 2) {
+      return res.status(200).json({
+        success: true,
+        message: "All agents are not available",
+        data: [],
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully get allocated agent",
+      data: agent,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
