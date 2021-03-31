@@ -189,7 +189,7 @@ exports.MarkAsResolvedChat = async (req, res, next) => {
 
     res.status(200).json({
       success: true,
-      message: "Successfully get allocated agent",
+      message: "Successfully resolve the chat",
       data: data,
     });
   } catch (err) {
