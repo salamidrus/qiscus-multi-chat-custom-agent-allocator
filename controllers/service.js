@@ -86,7 +86,7 @@ exports.Assign = async (req, res, next) => {
 
     // increment the  agent's slot
     await Agent.findOneAndUpdate(
-      { "agenData.id": agent_id },
+      { "agentData.id": Number(agent_id) },
       {
         $inc: { slot: 1 },
       }
