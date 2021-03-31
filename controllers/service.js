@@ -95,7 +95,13 @@ exports.AssignAgent = async (req, res, next) => {
     // add agent id to customer data
     await Customer.findOneAndUpdate(
       { "userData.room_id": room_id },
-      { $set: { agent_id: agent_id, isQueue: false } }
+      {
+        $set: {
+          agent_id: agent_id,
+          isQueue: false,
+          "userData.candidate_agent": data.data.added_agent,
+        },
+      }
     );
 
     res.status(200).json({
@@ -184,6 +190,48 @@ exports.MarkAsResolvedChat = async (req, res, next) => {
       success: true,
       message: "Successfully get allocated agent",
       data: data,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.RemoveAgent = async (req, res, next) => {
+  try {
+    const { room_id, agent_id } = req.body;
+
+    // assign the agent
+    let { data } = await axios({
+      url: `${BASE_URI}/api/v1/admin/service/remove_agent`,
+      method: "POST",
+      headers: {
+        "Qiscus-App-Id": APP_CODE,
+        "Qiscus-Secret-Key": SECRET_KEY,
+      },
+      data: {
+        room_id: room_id,
+        agent_id: agent_id,
+      },
+    });
+
+    // decrement the  agent's slot
+    await Agent.findOneAndUpdate(
+      { "agentData.id": Number(agent_id) },
+      {
+        $inc: { slot: -1 },
+      }
+    );
+
+    // removing the agent id and data on customer data
+    await Customer.findOneAndUpdate(
+      { "userData.room_id": room_id },
+      { $set: { agent_id: null, "userData.candidate_agent": null } }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully remove the agent",
+      data: data.data,
     });
   } catch (err) {
     next(err);
