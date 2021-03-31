@@ -25,20 +25,21 @@ This project is intended to complete the assignment for qiscus as multi channel 
       - Constraint
       - Postman API Documentation
       - Demo
-- [Links](#website)
-
-- [License](#license)
 - [Links](#links)
 
+- [License](#license)
 
-## License
-
-The template is licensed under the terms of the GPL Open Source
-license and is available for free.
 
 ## Links
 
 * <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
 * <a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> Sequence Diagram </a>
 * <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> ERD </a>
+
+## License
+
+The template is licensed under the terms of the GPL Open Source
+license and is available for free.
+
+
 
