@@ -4,10 +4,11 @@ Qiscus Custom Agent Allocator
 
 This project is intended to complete the assignment for qiscus as multi channel chat service with custom agent allocation. The customized way is on the queue handler when a customer chat the agent through the available channel. It is compulsory to set the max capacity with the mind of one agent can only serve two customers at one time, along the way, customer should wait first until the agent is available with First In First Out (FIFO) paradigm.
 
-
-<a href="https://www.qiscus.com/" target="_blank"> 
+<div align="center">
+<a href="https://www.qiscus.com/" target="_blank" > 
 <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617152054/qiscus/case-study-logo-qiscus.5433a4b9da2693dd49766a971aac887ece8c6d18_q7ruqo.png" alt="qiscus">
 </a>
+</div>
 
 
 ## Table of content
