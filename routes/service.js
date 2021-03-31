@@ -4,6 +4,7 @@ const serviceControllers = require("../controllers/service");
 
 router.post("/allocate_assign", serviceControllers.AllocateAndAssign);
 router.post("/assign", serviceControllers.Assign);
-router.post("/allocate", serviceControllers.Allocate);
+router.get("/allocate", serviceControllers.Allocate);
+router.post("/mark_as_resolved", serviceControllers.MarkAsResolved);
 
 module.exports = router;

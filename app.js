@@ -29,8 +29,10 @@ db.once("open", () => console.log("Connected to MongoDB"));
 // routes
 const errorHandler = require("./middlewares/errorHandler");
 const agentRoutes = require("./routes/agent");
+const customerRoutes = require("./routes/customer");
 const serviceRoutes = require("./routes/service");
 app.use("/agent", agentRoutes);
+app.use("/customer", customerRoutes);
 app.use("/service", serviceRoutes);
 app.use(errorHandler);
 

@@ -1,4 +1,4 @@
-const QueueList = require("../models/queueList");
+const Customer = require("../models/customer");
 const Agent = require("../models/agent");
 const axios = require("axios");
 const { BASE_URI, APP_CODE, SECRET_KEY } = process.env;
@@ -31,17 +31,21 @@ exports.AllocateAndAssign = async (req, res, next) => {
         await Agent.findByIdAndUpdate(agents[i]._id, {
           $inc: { slot: 1 },
         });
+
+        // record the customer data
+        await Customer.create({ userData: req.body });
         break;
       }
 
       // Run only when checker pass the last agent
       if (i == agents.length - 1) {
         // check if current user is already on the list then skip
-        let checkUser = await QueueList.findOne({
+        let checkUser = await Customer.findOne({
           "userData.email": email,
         });
-        // put user into queue list
-        if (!checkUser) await QueueList.create({ userData: req.body });
+        // put user into queue list by set the queue flag
+        if (!checkUser)
+          await Customer.create({ userData: req.body, isQueue: true });
       }
     }
 
@@ -105,6 +109,44 @@ exports.Allocate = async (req, res, next) => {
       success: true,
       message: "Successfully get allocated agent",
       data: agent,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.MarkAsResolved = async (req, res, next) => {
+  try {
+    const { room_id, notes, is_send_email, extras, agent_id } = req.body;
+    // assign the agent
+    let { data } = await axios({
+      url: `${BASE_URI}/api/v1/agent/service/mark_as_resolved`,
+      method: "POST",
+      headers: {
+        Authorization: req.headers.Authorization,
+        "Qiscus-App-Id": APP_CODE,
+      },
+      data: {
+        room_id,
+        agent_id,
+        notes,
+        is_send_email,
+        extras,
+      },
+    });
+
+    // decrement the  agent's slot
+    await Agent.findOneAndUpdate(
+      { "agenData.id": agent_id },
+      {
+        $inc: { slot: -1 },
+      }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully get allocated agent",
+      data: data,
     });
   } catch (err) {
     next(err);
