@@ -3,7 +3,7 @@ const Agent = require("../models/agent");
 const axios = require("axios");
 const { BASE_URI, APP_CODE, SECRET_KEY } = process.env;
 
-exports.AllocateAndAssign = async (req, res, next) => {
+exports.AllocateAndAssignAgent = async (req, res, next) => {
   try {
     const { room_id, email, name } = req.body;
 
@@ -66,7 +66,7 @@ exports.AllocateAndAssign = async (req, res, next) => {
   }
 };
 
-exports.Assign = async (req, res, next) => {
+exports.AssignAgent = async (req, res, next) => {
   try {
     const { room_id, agent_id } = req.body;
 
@@ -108,7 +108,7 @@ exports.Assign = async (req, res, next) => {
   }
 };
 
-exports.Allocate = async (req, res, next) => {
+exports.AllocateAgent = async (req, res, next) => {
   try {
     // allocate agent sort by the least slot
     const agent = await Agent.findOne().sort({ slot: 1 }).select("-_id");
@@ -131,7 +131,28 @@ exports.Allocate = async (req, res, next) => {
   }
 };
 
-exports.MarkAsResolved = async (req, res, next) => {
+exports.AllocateCustomer = async (req, res, next) => {
+  try {
+    let data = await Customer.findOne({ isQueue: true }).sort({ createdAt: 1 });
+
+    if (!data)
+      return res.status(200).json({
+        success: true,
+        message: "There is no customer in queue",
+        data: null,
+      });
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully get the customer",
+      data,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.MarkAsResolvedChat = async (req, res, next) => {
   try {
     const { room_id, notes, is_send_email, extras, agent_id } = req.body;
     // assign the agent
