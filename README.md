@@ -12,16 +12,16 @@ This project is intended to complete the assignment for qiscus as multi channel 
 
 ## Table of content
 
-- [📋 Tasks](#website)
-    - [🔧 Configuration](#1-configuration)
+- 📋 [Tasks](#website)
+    - 🔧 [Configuration](#1-configuration)
       -  [User Email](#user-email)
       -  [Qiscus App ID](#qiscus-app-id)
       -  [Widget URL](#widget-url)
-    - [📉 Design and Analysis](#chatbot)
+    - 📉 [Design and Analysis](#chatbot)
       -  Flowchart
       -  Sequence Diagram
       -  ERD
-    - [🖥️ Code Implementation](#chatbot)
+    - 🖥️ [Code Implementation](#chatbot)
       - Constraint
       - Postman API Documentation
       - Demo
@@ -39,7 +39,7 @@ The way we setup the app on the qiscus platform and intended to understand the q
 #### User Email
 the user email for the application: **bariz@qiscus.net**
 
-#### 🔑 Qiscus App ID
+#### Qiscus App ID
 the app id for the application: davok-k9f4zmphwo5nttb
 
 #### Widget URL
