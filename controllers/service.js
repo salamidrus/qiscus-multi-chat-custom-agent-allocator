@@ -33,7 +33,12 @@ exports.AllocateAndAssign = async (req, res, next) => {
         });
 
         // record the customer data
-        await Customer.create({ name, email, userData: req.body });
+        await Customer.create({
+          name,
+          email,
+          agent_id: agents[i].agentData.id,
+          userData: req.body,
+        });
         break;
       }
 
@@ -85,6 +90,12 @@ exports.Assign = async (req, res, next) => {
       {
         $inc: { slot: 1 },
       }
+    );
+
+    // add agent id to customer data
+    await Customer.findOneAndUpdate(
+      { "userData.room_id": room_id },
+      { $set: { agent_id: agent_id } }
     );
 
     res.status(200).json({
