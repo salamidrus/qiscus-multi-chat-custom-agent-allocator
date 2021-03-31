@@ -1,8 +1,6 @@
 const Agent = require("../models/agent");
 const axios = require("axios");
-const BASE_URI = process.env.BASE_URI;
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN;
-const APP_CODE = process.env.APP_CODE;
+const { BASE_URI, ADMIN_TOKEN, APP_CODE } = process.env;
 
 exports.SeedAgents = async (req, res, next) => {
   try {
