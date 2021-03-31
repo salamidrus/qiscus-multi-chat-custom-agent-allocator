@@ -5,7 +5,7 @@ const { BASE_URI, APP_CODE, SECRET_KEY } = process.env;
 
 exports.AllocateAndAssign = async (req, res, next) => {
   try {
-    const { room_id, email } = req.body;
+    const { room_id, email, name } = req.body;
 
     // allocate agent sort by the least slot
     const agents = await Agent.find().sort({ slot: 1 });
@@ -33,7 +33,7 @@ exports.AllocateAndAssign = async (req, res, next) => {
         });
 
         // record the customer data
-        await Customer.create({ userData: req.body });
+        await Customer.create({ name, email, userData: req.body });
         break;
       }
 
@@ -45,7 +45,12 @@ exports.AllocateAndAssign = async (req, res, next) => {
         });
         // put user into queue list by set the queue flag
         if (!checkUser)
-          await Customer.create({ userData: req.body, isQueue: true });
+          await Customer.create({
+            name,
+            email,
+            userData: req.body,
+            isQueue: true,
+          });
       }
     }
 

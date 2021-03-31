@@ -3,6 +3,8 @@ const { Schema } = mongoose;
 
 const customerSchema = new Schema(
   {
+    name: { type: String },
+    email: { type: String },
     userData: { type: Object },
     isQueue: { type: Boolean, default: false },
   },
