@@ -12,47 +12,47 @@ This project is intended to complete the assignment for qiscus as multi channel 
 
 ## Table of content
 
-- [Tasks](#website)
-    - [1. Configuration](#1-configuration)
+- [📋 Tasks](#website)
+    - [🔧 Configuration](#1-configuration)
       -  [User Email](#user-email)
       -  [Qiscus App ID](#qiscus-app-id)
       -  [Widget URL](#widget-url)
-    - [2. Design and Analysis](#chatbot)
+    - [📉 Design and Analysis](#chatbot)
       -  Flowchart
       -  Sequence Diagram
       -  ERD
-    - [3. Code Implementation](#chatbot)
+    - [🖥️ Code Implementation](#chatbot)
       - Constraint
       - Postman API Documentation
       - Demo
-- [Links](#links)
+- 🔗 [Links](#links)
 
-- [License](#license)
+- ⚖️ [License](#license)
 
 
 ## Tasks
 There are three sections for the assignments covering the configuration, design and analysis, and code implementation.
 
-### 1. Configuration
+### Configuration
 The way we setup the app on the qiscus platform and intended to understand the qiscus multi channel chat features and work flow.
 
 #### User Email
 the user email for the application: **bariz@qiscus.net**
 
-#### Qiscus App ID
+#### 🔑 Qiscus App ID
 the app id for the application: davok-k9f4zmphwo5nttb
 
 #### Widget URL
 the widget url, you find it on: <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
 
 
-## Links
+## 🔗 Links
 
 * <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
 * <a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> Sequence Diagram </a>
 * <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> ERD </a>
 
-## License
+## ⚖️ License
 
 The template is licensed under the terms of the GPL Open Source
 license and is available for free.
