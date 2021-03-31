@@ -13,10 +13,10 @@ This project is intended to complete the assignment for qiscus as multi channel 
 ## Table of content
 
 - [Tasks](#website)
-    - [1. Configuration](#konten)
-      -  User Email
-      -  Qiscus App ID
-      -  Widget URL
+    - [1. Configuration](#1.-configuration)
+      -  [User Email](#user-email)
+      -  [Qiscus App ID](#qiscus-app-id)
+      -  [Widget URL](#widget-url)
     - [2. Design and Analysis](#chatbot)
       -  Flowchart
       -  Sequence Diagram
