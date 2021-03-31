@@ -43,7 +43,7 @@ the user email for the application: **bariz@qiscus.net**
 the app id for the application: davok-k9f4zmphwo5nttb
 
 #### Widget URL
-the widget url, you find it on: <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
+the widget url, you can find it on: <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
 
 
 ## 🔗 Links
