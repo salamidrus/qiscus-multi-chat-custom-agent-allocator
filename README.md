@@ -19,9 +19,9 @@ This project is intended to complete the assignment for qiscus as multi channel 
       -  [Qiscus App ID](#qiscus-app-id)
       -  [Widget URL](#widget-url)
     - 📉 [Design and Analysis](#chatbot)
-      -  Flowchart
-      -  Sequence Diagram
-      -  ERD
+      -  [Flowchart](#flowchart)
+      -  [Sequence Diagram](#sequence-diagram)
+      -  [ERD](#erd)
     - 🖥️ [3. Code Implementation](#chatbot)
       - Constraint
       - Postman API Documentation
@@ -45,6 +45,39 @@ the app id for the application: davok-k9f4zmphwo5nttb
 
 #### Widget URL
 the widget url, you can find it on: <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
+
+### 📉 Design and Analysis
+How the plan to achieve the tasks and required custom services
+
+#### Flowchart
+The flowchart for the designed app
+
+<a href="https://whimsical.com/qiscus-flow-chart-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617177936/qiscus/qiscus-flow-chart_2x_2_v9cfz2.png" alt="flowchart">
+</a>
+
+
+The flowchart file can be found here: <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
+
+#### Sequence Diagram
+The sequence diagram for the designed app
+
+<a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617177934/qiscus/qiscus-sequence-diagram_2x_xfvabs.png" alt="sequencediagram">
+</a>
+
+
+The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> Sequence Diagram </a>
+
+#### ERD
+The ERD for the designed app
+
+<a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617177934/qiscus/qiscus-erd_2x_1_h9wxoa.png" alt="erd">
+</a>
+
+
+The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> Sequence Diagram </a>
 
 
 ## 🔗 Links
