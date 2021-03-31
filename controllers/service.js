@@ -51,3 +51,39 @@ exports.AllocateAndAssign = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.Assign = async (req, res, next) => {
+  try {
+    const { room_id, agent_id } = req.body;
+
+    // assign the agent
+    let { data } = await axios({
+      url: `${BASE_URI}/api/v1/admin/service/assign_agent`,
+      method: "POST",
+      headers: {
+        "Qiscus-App-Id": APP_CODE,
+        "Qiscus-Secret-Key": SECRET_KEY,
+      },
+      data: {
+        room_id: room_id,
+        agent_id: agent_id,
+      },
+    });
+
+    // increment the  agent's slot
+    await Agent.findOneAndUpdate(
+      { "agenData.id": agent_id },
+      {
+        $inc: { slot: 1 },
+      }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully assign the agent",
+      data: data.data,
+    });
+  } catch (err) {
+    next(err);
+  }
+};

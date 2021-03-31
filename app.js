@@ -29,9 +29,9 @@ db.once("open", () => console.log("Connected to MongoDB"));
 // routes
 const errorHandler = require("./middlewares/errorHandler");
 const agentRoutes = require("./routes/agent");
-const allocateRoutes = require("./routes/allocate");
+const serviceRoutes = require("./routes/service");
 app.use("/agent", agentRoutes);
-app.use("/allocate", allocateRoutes);
+app.use("/service", serviceRoutes);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
