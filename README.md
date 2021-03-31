@@ -30,6 +30,22 @@ This project is intended to complete the assignment for qiscus as multi channel 
 - [License](#license)
 
 
+## Tasks
+There are three sections for the assignments covering the configuration, design and analysis, and code implementation.
+
+### 1. Configuration
+The way we setup the app on the qiscus platform and intended to understand the qiscus multi channel chat features and work flow.
+
+#### User Email
+the user email for the application: **bariz@qiscus.net**
+
+#### Qiscus App ID
+the app id for the application: davok-k9f4zmphwo5nttb
+
+#### Widget URL
+the widget url, you find it on: <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
+
+
 ## Links
 
 * <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
