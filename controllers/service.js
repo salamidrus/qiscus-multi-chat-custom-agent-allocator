@@ -225,7 +225,14 @@ exports.RemoveAgent = async (req, res, next) => {
     // removing the agent id and data on customer data
     await Customer.findOneAndUpdate(
       { "userData.room_id": room_id },
-      { $set: { agent_id: null, "userData.candidate_agent": null } }
+      {
+        $set: {
+          agent_id: null,
+          "userData.candidate_agent": null,
+          isQueue: true,
+          created_at: Date.now(),
+        },
+      }
     );
 
     res.status(200).json({
