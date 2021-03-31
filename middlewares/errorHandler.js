@@ -5,10 +5,10 @@ module.exports = (err, req, res, next) => {
         success: false,
         message: err.message,
       });
-    } else if (err.response && err.response.data) {
+    } else if (err.response.data) {
       res.status(400).json({
         success: false,
-        message: err.response.data.error,
+        message: err.response.data.errors,
       });
     } else {
       res.status(400).json({
