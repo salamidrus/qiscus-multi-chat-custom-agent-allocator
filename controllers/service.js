@@ -181,7 +181,7 @@ exports.MarkAsResolvedChat = async (req, res, next) => {
 
     // decrement the  agent's slot
     await Agent.findOneAndUpdate(
-      { "agenData.id": agent_id },
+      { "agentData.id": Number(agent_id) },
       {
         $inc: { slot: -1 },
       }
