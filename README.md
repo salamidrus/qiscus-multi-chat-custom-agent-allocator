@@ -103,9 +103,12 @@ Provided video is to see how it is implemented on qiscus multi channel chat serv
 
 ## 🔗 Links
 
+* <a href="https://codepen.io/salamidrus/full/zYNKBEa" target="_blank"> Widget URL</a>
 * <a href="https://whimsical.com/qiscus-DkgQ2i1xmDZg4am42N7Tz2" target="_blank"> Flowchart </a>
 * <a href="https://whimsical.com/qiscus-sequence-diagram-XjQDwcwKeFCMT3DvRL17pD" target="_blank"> Sequence Diagram </a>
 * <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> ERD </a>
+* <a href="https://documenter.getpostman.com/view/12075190/TzCMd8Q8" target="_blank"> Qiscus - Agent Allocation API </a>
+* <a href="https://res.cloudinary.com/di02ey9t7/video/upload/v1617183364/qiscus/qiscus-demo_xj5cqo.mp4" target="_blank"> VIDEO DEMO </a>
 
 ## ⚖️ License
 
