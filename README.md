@@ -13,7 +13,7 @@ This project is intended to complete the assignment for qiscus as multi channel 
 ## Table of content
 
 - [Tasks](#website)
-    - [1. Configuration](#1.-configuration)
+    - [1. Configuration](#1-configuration)
       -  [User Email](#user-email)
       -  [Qiscus App ID](#qiscus-app-id)
       -  [Widget URL](#widget-url)
