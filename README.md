@@ -23,9 +23,8 @@ This project is intended to complete the assignment for qiscus as multi channel 
       -  [Sequence Diagram](#sequence-diagram)
       -  [ERD](#erd)
     - 🖥️ [Code Implementation](#chatbot)
-      - Constraint
-      - Postman API Documentation
-      - Demo
+      - [Postman API Documentation](#documentation)
+      - [Demo](#demo)
 - 🔗 [Links](#links)
 
 - ⚖️ [License](#license)
@@ -78,6 +77,17 @@ The ERD for the designed app
 
 
 The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> Sequence Diagram </a>
+
+
+### 🖥️ Code Implementation
+The documentation and demo how the app works
+
+#### Documentation
+The collection of all APIs can be found here: <a href="https://documenter.getpostman.com/view/12075190/TzCMd8Q8" target="_blank"> Qiscus - Agent Allocation API </a>
+
+### Demo
+Provided video is to see how it is implemented on qiscus multi channel chat services.
+
 
 
 ## 🔗 Links
