@@ -95,7 +95,7 @@ exports.Assign = async (req, res, next) => {
     // add agent id to customer data
     await Customer.findOneAndUpdate(
       { "userData.room_id": room_id },
-      { $set: { agent_id: agent_id } }
+      { $set: { agent_id: agent_id, isQueue: false } }
     );
 
     res.status(200).json({
