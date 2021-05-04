@@ -76,7 +76,7 @@ The ERD for the designed app
 </a>
 
 
-The sequence diagram file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank">ERD </a>
+The ERD file can be found here: <a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank">ERD </a>
 
 
 ### 🖥️ Code Implementation
@@ -93,7 +93,7 @@ The collection of all APIs can be found here: <a href="https://documenter.getpos
 ### Demo
 Provided video is to see how it is implemented on qiscus multi channel chat services.
 
-<a href="https://whimsical.com/qiscus-erd-QkCbKEn2MousXTptMcE4Q9" target="_blank"> 
+<a href="https://res.cloudinary.com/di02ey9t7/video/upload/v1617183364/qiscus/qiscus-demo_xj5cqo.mp4" target="_blank"> 
 <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1617183493/qiscus/Capture_e5pcqe.png" alt="erd">
 </a>
 
